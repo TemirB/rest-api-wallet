@@ -1,19 +1,26 @@
+# rest-api-wallet
+
+rest-api-wallet
+
+## Структура проекта
+
+Этот проект использует следующую структуру директорий:
+
 .
-├── cmd                  main applications of the project
-│   └── server           the API server application
-├── config               configuration files for different environments
-├── internal             private application and library code
-│   ├── album            album-related features
-│   ├── auth             authentication feature
-│   ├── config           configuration library
-│   ├── entity           entity definitions and domain logic
-│   ├── errors           error types and handling
-│   ├── healthcheck      healthcheck feature
-│   └── test             helpers for testing purpose
-├── migrations           database migrations
-├── pkg                  public library code
-│   ├── accesslog        access log middleware
-│   ├── graceful         graceful shutdown of HTTP server
-│   ├── log              structured and context-aware logger
-│   └── pagination       paginated list
-└── testdata             test data scripts
+├── cmd                  # Главные приложения проекта
+│   └── rest-api           # Приложение API-сервера
+├── config               # Конфигурационные файлы для различных окружений
+├── internal             # Приватный код приложения и библиотеки
+│   ├── config           # Библиотека для работы с конфигурациями
+│   ├── handler          # Определения сущностей и бизнес-логика
+│   ├── models           # Типы ошибок и обработка ошибок
+│   ├── service          # Функционал для проверки работоспособности (healthcheck)
+│   └── repository       # Хелперы для тестирования
+├── initdb               # Миграции базы данных
+├── pkg                  # Публичный код библиотеки
+│   └── db               # Структуры для работы с пагинированными списками
+├── go.mod               # Модульные зависимости Go проекта
+├── go.sum               # Контроль целостности зависимостей Go проекта
+├── Makefile             # Автоматизация сборки проекта
+├── docker-compose.yaml  # Конфигурация для запуска сервисов Docker
+└── Dockerfile           # Скрипт для сборки образа Docker для тестовых данных
